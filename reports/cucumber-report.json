@@ -1,0 +1,515 @@
+[
+  {
+    "description": "    As a system user\n    I want to create a new customer order\n    So that the order is processed and stored in the system",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-customer-order-via-api;create-a-new-customer-order",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Create a new customer order",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14428499
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2292500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 405900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 197000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 542899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40444399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the response status should be 201",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 351400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the response should contain the correct order information",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4968500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3402199
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1525299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-customer-order-via-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new customer order via API",
+    "tags": [],
+    "uri": "tests\\features\\customer.feature"
+  },
+  {
+    "description": "    As a system user\n    I want to create a new customer order\n    So that the order is processed and stored in the system",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-customer-order-via-api;retrieve-a-customer-order-by-id",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Retrieve a customer order by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1863299
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2780099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 226800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 235900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4927399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "an order Id is generated",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 270400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "a valid retrieve order API endpoint is available",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 368500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I send a GET request",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:102"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3990099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "the response should contain the correct order information",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3968100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1221099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1076599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-customer-order-via-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new customer order via API",
+    "tags": [],
+    "uri": "tests\\features\\retrieve-order.feature"
+  },
+  {
+    "description": "    As a system user\n    I want to create a new customer order\n    So that the order is processed and stored in the system",
+    "elements": [
+      {
+        "description": "",
+        "id": "create-a-new-customer-order-via-api;retrieve-a-customer-order-by-id",
+        "keyword": "Scenario Outline",
+        "line": 33,
+        "name": "Retrieve a customer order by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1721999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1982199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 121799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4609600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "an order Id is generated",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:93"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "a valid update order API endpoint is available",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:118"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 222500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "order update payload is provided",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:106"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 230999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I send a Update request",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:110"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4464699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "the response should contain the correct order information",
+            "match": {
+              "location": "tests\\step-definitions\\create-order.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3414500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6137400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 879999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "create-a-new-customer-order-via-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Create a new customer order via API",
+    "tags": [],
+    "uri": "tests\\features\\update-order.feature"
+  }
+]

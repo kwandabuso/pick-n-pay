@@ -1,0 +1,9 @@
+{
+    "baseURL": "http://localhost:3000",
+    "endpoints": {
+        "createOrder": "/api/orders",
+        "getOrder": "/api/orders/{id}",
+        "updateOrder": "/api/orders/{id}/status",
+        "deleteOrder": "/api/orders/{id}"
+    }
+}

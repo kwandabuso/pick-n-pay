@@ -1,0 +1,4 @@
+[
+  { "customerId": "1", "items": [{ "sku": "A", "qty": 1 }] },
+  { "customerId": "2", "items": [{ "sku": "B", "qty": 2 }] }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "picknpay",
+  "version": "1.0.0",
+  "description": "Mock OMS API automation framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/mock-server/mock-server/server.js",
+    "test": "cucumber-js --format json:reports/cucumber-report.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^12.8.2",
+    "express": "^5.2.1",
+    "playwright": "^1.59.1",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
