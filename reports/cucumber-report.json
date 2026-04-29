@@ -14,15 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14428499
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 2292500
+              "duration": 21594099
             }
           },
           {
@@ -31,11 +23,11 @@
             "line": 9,
             "name": "a valid API endpoint is available",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:34"
+              "location": "tests\\step-definations\\order-api.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 405900
+              "duration": 334600
             }
           },
           {
@@ -44,11 +36,11 @@
             "line": 10,
             "name": "valid headers for authentication and content type are provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:38"
+              "location": "tests\\step-definations\\order-api.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 197000
+              "duration": 189300
             }
           },
           {
@@ -57,11 +49,11 @@
             "line": 11,
             "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:45"
+              "location": "tests\\step-definations\\order-api.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 542899
+              "duration": 1056399
             }
           },
           {
@@ -70,11 +62,11 @@
             "line": 12,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:52"
+              "location": "tests\\step-definations\\order-api.js:57"
             },
             "result": {
               "status": "passed",
-              "duration": 40444399
+              "duration": 37919699
             }
           },
           {
@@ -83,11 +75,11 @@
             "line": 13,
             "name": "the response status should be 201",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:63"
+              "location": "tests\\step-definations\\order-api.js:68"
             },
             "result": {
               "status": "passed",
-              "duration": 351400
+              "duration": 318700
             }
           },
           {
@@ -96,11 +88,11 @@
             "line": 14,
             "name": "the response should contain the correct order information",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:67"
+              "location": "tests\\step-definations\\order-api.js:72"
             },
             "result": {
               "status": "passed",
-              "duration": 4968500
+              "duration": 6185800
             }
           },
           {
@@ -108,35 +100,325 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3402199
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1525299
+              "duration": 5725199
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@create",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@positive",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-customer-order-via-api;create-a-new-customer-order-without-a-customer-id",
+        "keyword": "Scenario Outline",
+        "line": 31,
+        "name": "Create a new customer order without a customer ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2916800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 240699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 153299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "order payload with customerId \"\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 753400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7360499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "the response status should be 400",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 162699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "the response should contain the bad request-customerId is required message",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:131"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3290899
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1325199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@create",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "create-a-new-customer-order-via-api;create-a-new-customer-order-without-authorisation",
+        "keyword": "Scenario Outline",
+        "line": 44,
+        "name": "Create a new customer order without Authorisation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1324800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 35,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "invalid headers without authentication and the content type is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 223199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "order payload with customerId \"1234\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 777199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 38,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8568600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "the response status should be 401",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "the response should contain the unauthorized message",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1952499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 972999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@create",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 33
+          },
+          {
+            "name": "@auth",
+            "line": 33
+          }
+        ],
         "type": "scenario"
       }
     ],
     "id": "create-a-new-customer-order-via-api",
-    "line": 1,
+    "line": 2,
     "keyword": "Feature",
     "name": "Create a new customer order via API",
-    "tags": [],
-    "uri": "tests\\features\\customer.feature"
+    "tags": [
+      {
+        "name": "@api",
+        "line": 1
+      },
+      {
+        "name": "@orders",
+        "line": 1
+      },
+      {
+        "name": "@create",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "tests\\features\\create-order.feature"
   },
   {
-    "description": "    As a system user\n    I want to create a new customer order\n    So that the order is processed and stored in the system",
+    "description": "    As a system user\n    I want to retrieve existing customer orders\n    So that I can view their details and status",
     "elements": [
       {
         "description": "",
-        "id": "create-a-new-customer-order-via-api;retrieve-a-customer-order-by-id",
+        "id": "retrieve-customer-orders-via-api;retrieve-a-customer-order-by-id",
         "keyword": "Scenario Outline",
         "line": 22,
         "name": "Retrieve a customer order by ID",
@@ -146,15 +428,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1863299
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 2780099
+              "duration": 1195500
             }
           },
           {
@@ -163,11 +437,11 @@
             "line": 9,
             "name": "a valid API endpoint is available",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:34"
+              "location": "tests\\step-definations\\order-api.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 226800
+              "duration": 141700
             }
           },
           {
@@ -176,11 +450,11 @@
             "line": 10,
             "name": "valid headers for authentication and content type are provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:38"
+              "location": "tests\\step-definations\\order-api.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 137100
+              "duration": 93600
             }
           },
           {
@@ -189,11 +463,11 @@
             "line": 11,
             "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:45"
+              "location": "tests\\step-definations\\order-api.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 235900
+              "duration": 2486100
             }
           },
           {
@@ -202,11 +476,11 @@
             "line": 12,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:52"
+              "location": "tests\\step-definations\\order-api.js:57"
             },
             "result": {
               "status": "passed",
-              "duration": 4927399
+              "duration": 4702299
             }
           },
           {
@@ -215,11 +489,11 @@
             "line": 13,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:93"
+              "location": "tests\\step-definations\\order-api.js:98"
             },
             "result": {
               "status": "passed",
-              "duration": 270400
+              "duration": 1388099
             }
           },
           {
@@ -228,11 +502,11 @@
             "line": 14,
             "name": "a valid retrieve order API endpoint is available",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:98"
+              "location": "tests\\step-definations\\order-api.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 368500
+              "duration": 178499
             }
           },
           {
@@ -241,11 +515,11 @@
             "line": 15,
             "name": "valid headers for authentication and content type are provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:38"
+              "location": "tests\\step-definations\\order-api.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 84599
+              "duration": 105199
             }
           },
           {
@@ -254,11 +528,11 @@
             "line": 16,
             "name": "I send a GET request",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:102"
+              "location": "tests\\step-definations\\order-api.js:108"
             },
             "result": {
               "status": "passed",
-              "duration": 3990099
+              "duration": 4458000
             }
           },
           {
@@ -267,11 +541,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:63"
+              "location": "tests\\step-definations\\order-api.js:68"
             },
             "result": {
               "status": "passed",
-              "duration": 155599
+              "duration": 131600
             }
           },
           {
@@ -280,11 +554,11 @@
             "line": 18,
             "name": "the response should contain the correct order information",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:67"
+              "location": "tests\\step-definations\\order-api.js:72"
             },
             "result": {
               "status": "passed",
-              "duration": 3968100
+              "duration": 9715200
             }
           },
           {
@@ -292,196 +566,599 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1221099
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1076599
+              "duration": 4899799
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@retrieve",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@positive",
+            "line": 7
+          }
+        ],
         "type": "scenario"
-      }
-    ],
-    "id": "create-a-new-customer-order-via-api",
-    "line": 1,
-    "keyword": "Feature",
-    "name": "Create a new customer order via API",
-    "tags": [],
-    "uri": "tests\\features\\retrieve-order.feature"
-  },
-  {
-    "description": "    As a system user\n    I want to create a new customer order\n    So that the order is processed and stored in the system",
-    "elements": [
+      },
       {
         "description": "",
-        "id": "create-a-new-customer-order-via-api;retrieve-a-customer-order-by-id",
+        "id": "retrieve-customer-orders-via-api;retrieve-a-customer-order-by-id-with-no-authorization",
         "keyword": "Scenario Outline",
-        "line": 33,
-        "name": "Retrieve a customer order by ID",
+        "line": 39,
+        "name": "Retrieve a customer order by ID with no authorization",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1721999
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1982199
+              "duration": 1193900
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 19,
+            "line": 26,
             "name": "a valid API endpoint is available",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:34"
+              "location": "tests\\step-definations\\order-api.js:37"
             },
             "result": {
               "status": "passed",
-              "duration": 121799
+              "duration": 205300
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 20,
+            "line": 27,
             "name": "valid headers for authentication and content type are provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:38"
+              "location": "tests\\step-definations\\order-api.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 60600
+              "duration": 70200
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 21,
+            "line": 28,
             "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:45"
+              "location": "tests\\step-definations\\order-api.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 184600
+              "duration": 857400
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 22,
+            "line": 29,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:52"
+              "location": "tests\\step-definations\\order-api.js:57"
             },
             "result": {
               "status": "passed",
-              "duration": 4609600
+              "duration": 6645600
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 23,
+            "line": 30,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:93"
+              "location": "tests\\step-definations\\order-api.js:98"
             },
             "result": {
               "status": "passed",
-              "duration": 101000
+              "duration": 2456699
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 24,
-            "name": "a valid update order API endpoint is available",
+            "line": 31,
+            "name": "a valid retrieve order API endpoint is available",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:118"
+              "location": "tests\\step-definations\\order-api.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 222500
+              "duration": 106099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 25,
-            "name": "valid headers for authentication and content type are provided",
+            "line": 32,
+            "name": "invalid headers without authentication and the content type is provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:38"
+              "location": "tests\\step-definations\\order-api.js:155"
             },
             "result": {
               "status": "passed",
-              "duration": 97100
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 26,
-            "name": "order update payload is provided",
-            "match": {
-              "location": "tests\\step-definitions\\create-order.js:106"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 230999
+              "duration": 121000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 27,
-            "name": "I send a Update request",
+            "line": 33,
+            "name": "I send a GET request",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:110"
+              "location": "tests\\step-definations\\order-api.js:108"
             },
             "result": {
               "status": "passed",
-              "duration": 4464699
+              "duration": 7228399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 28,
-            "name": "the response status should be 200",
+            "line": 34,
+            "name": "the response status should be 401",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:63"
+              "location": "tests\\step-definations\\order-api.js:68"
             },
             "result": {
               "status": "passed",
-              "duration": 137599
+              "duration": 115400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "the response should contain the unauthorized message",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5770500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1072500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@retrieve",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 24
+          },
+          {
+            "name": "@auth",
+            "line": 24
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "retrieve-customer-orders-via-api",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Retrieve customer orders via API",
+    "tags": [
+      {
+        "name": "@api",
+        "line": 1
+      },
+      {
+        "name": "@orders",
+        "line": 1
+      },
+      {
+        "name": "@retrieve",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
+    "uri": "tests\\features\\retrieve-order.feature"
+  },
+  {
+    "description": "    As a system user\n    I want to update an existing customer order\n    So that the order status can be changed in the system",
+    "elements": [
+      {
+        "description": "",
+        "id": "update-a-customer-order-via-api;update-a-customer-order-by-id",
+        "keyword": "Scenario Outline",
+        "line": 23,
+        "name": "Update a customer order by ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1076000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 234600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2416000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4802599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "an order Id is generated",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1281000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "a valid update order API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "order update payload is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I send a Update request",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5772400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the response status should be 200",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 101699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "the response should contain the correct order information",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3175000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1027199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@update",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@smoke",
+            "line": 7
+          },
+          {
+            "name": "@positive",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-customer-order-via-api;update-a-customer-order-by-id-with-no-authorisation",
+        "keyword": "Scenario Outline",
+        "line": 41,
+        "name": "Update a customer order by ID with no Authorisation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1309100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 387099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66499
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
             "line": 29,
-            "name": "the response should contain the correct order information",
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
             "match": {
-              "location": "tests\\step-definitions\\create-order.js:67"
+              "location": "tests\\step-definations\\order-api.js:48"
             },
             "result": {
               "status": "passed",
-              "duration": 3414500
+              "duration": 868500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8687099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "an order Id is generated",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1571700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 32,
+            "name": "a valid update order API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "invalid headers without authentication and the content type is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:155"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "order update payload is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 69399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I send a Update request",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3470899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "the response status should be 401",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "the response should contain the unauthorized message",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:162"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5942700
             }
           },
           {
@@ -489,27 +1166,252 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6137400
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 879999
+              "duration": 1362300
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@update",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 25
+          },
+          {
+            "name": "@auth",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "update-a-customer-order-via-api;update-a-customer-order-by-id-with-invalid-order-id",
+        "keyword": "Scenario Outline",
+        "line": 59,
+        "name": "Update a customer order by ID with invalid order Id",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1760600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 45,
+            "name": "a valid API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 142499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "order payload with customerId \"12345\", sku \"A1\" and quantity 2 is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 762099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "I send a POST request to \"/orders\" with the order data",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4156399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 49,
+            "name": "an invalid order Id is generated",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:171"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 167300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 50,
+            "name": "a valid update order API endpoint is available",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:127"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 99200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 51,
+            "name": "valid headers for authentication and content type are provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "order update payload is provided",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 53,
+            "name": "I send a Update request",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:119"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6145300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "the response status should be 404",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:68"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 105800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "the response should contain the not found message",
+            "match": {
+              "location": "tests\\step-definations\\order-api.js:175"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1430100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 981099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 1
+          },
+          {
+            "name": "@orders",
+            "line": 1
+          },
+          {
+            "name": "@update",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 1
+          },
+          {
+            "name": "@negative",
+            "line": 43
+          }
+        ],
         "type": "scenario"
       }
     ],
-    "id": "create-a-new-customer-order-via-api",
-    "line": 1,
+    "id": "update-a-customer-order-via-api",
+    "line": 2,
     "keyword": "Feature",
-    "name": "Create a new customer order via API",
-    "tags": [],
+    "name": "Update a customer order via API",
+    "tags": [
+      {
+        "name": "@api",
+        "line": 1
+      },
+      {
+        "name": "@orders",
+        "line": 1
+      },
+      {
+        "name": "@update",
+        "line": 1
+      },
+      {
+        "name": "@regression",
+        "line": 1
+      }
+    ],
     "uri": "tests\\features\\update-order.feature"
   }
 ]

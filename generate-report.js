@@ -1,4 +1,4 @@
-const reporter = require("cucumber-html-reporter");
+import reporter from "cucumber-html-reporter";
 
 const options = {
   theme: "bootstrap",

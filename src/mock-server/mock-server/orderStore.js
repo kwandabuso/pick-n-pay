@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+import { v4 as uuidv4 } from "uuid";
 
 const orders = {};
 
@@ -60,7 +60,7 @@ function listOrders() {
   return Object.values(orders);
 }
 
-module.exports = {
+export {
   createOrder,
   getOrder,
   updateStatus,

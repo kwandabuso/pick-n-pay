@@ -3,15 +3,25 @@
   "version": "1.0.0",
   "description": "Mock OMS API automation framework",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/mock-server/mock-server/server.js",
-    "test": "cucumber-js --format json:reports/cucumber-report.json"
+    "test:run-all": "cucumber-js --config cucumber.cjs",
+    "test:create": "cucumber-js --config cucumber.cjs --tags \"@create\"",
+    "test:retrieve": "cucumber-js --config cucumber.cjs --tags \"@retrieve\"",
+    "test:update": "cucumber-js --config cucumber.cjs --tags \"@update\"",
+    "test:smoke": "cucumber-js --config cucumber.cjs --tags \"@smoke\"",
+    "test:positive": "cucumber-js --config cucumber.cjs --tags \"@positive\"",
+    "test:negative": "cucumber-js --config cucumber.cjs --tags \"@negative\"",
+    "test:regression": "cucumber-js --config cucumber.cjs --tags \"@regression\"",
+    "report": "node generate-report.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@cucumber/cucumber": "^12.8.2",
+    "cucumber-html-reporter": "^7.2.0",
     "express": "^5.2.1",
     "playwright": "^1.59.1",
     "uuid": "^14.0.0"

@@ -1,5 +1,5 @@
-module.exports.createOrderPayload = {
-  customerId: "12345",
+export const createOrderPayload = {
+  customerId: "",
   items: [
     {
       sku: "A1",
@@ -8,6 +8,6 @@ module.exports.createOrderPayload = {
   ],
 };
 
-module.exports.updateOrderPayloadSuccess = {
+export const updateOrderPayloadSuccess = {
   status: "RESERVED",
 };

@@ -7,7 +7,10 @@ import {
   buildCreateOrderPayloadSuccess,
   buildUpdateOrderPayload,
 } from "../../common/utils/payload-builder.js";
-import { createOrdersHeadersSuccess } from "../../data/headers/create-order-headers.js";
+import {
+  createOrdersHeadersSuccess,
+  createOrdersHeadersUnauthorized,
+} from "../../data/headers/create-order-headers.js";
 console.log("Step definitions loaded");
 
 let apiContext;
@@ -45,6 +48,8 @@ Given(
 Given(
   "order payload with customerId {string}, sku {string} and quantity {int} is provided",
   function (customerId, sku, quantity) {
+    console.log("Building order payload with:", { customerId, sku, quantity });
+
     orderData = buildCreateOrderPayloadSuccess(customerId, sku, quantity);
   },
 );
@@ -90,7 +95,8 @@ Then(
   },
 );
 
-When("an order Id is generated", function () {
+When("an order Id is generated", async function () {
+  body = await response.json();
   orderId = body.id;
 });
 
@@ -100,6 +106,9 @@ Given("a valid retrieve order API endpoint is available", function () {
 });
 
 When("I send a GET request", async function () {
+  console.log("Sending GET request to:", this.url);
+  console.log("Sending GET request to:", this.headers);
+
   response = await apiServices.sendGetRequest(this.url, this.headers);
 });
 
@@ -117,4 +126,57 @@ When("I send a Update request", async function () {
 
 Given("a valid update order API endpoint is available", function () {
   this.url = baseURL + endpoints.updateOrder.replace("{id}", orderId);
+});
+
+Then(
+  "the response should contain the bad request-customerId is required message",
+  async function () {
+    body = await response.json();
+    console.log("response body:", body);
+
+    apiServices.validateResponseBody(body, "message");
+
+    expect(body.message).toBe("customerId is required");
+  },
+);
+
+Then(
+  "the response should contain the bad request-sku is required message",
+  async function () {
+    body = await response.json();
+    console.log("response body:", body);
+
+    apiServices.validateResponseBody(body, "message");
+
+    expect(body.message).toBe("customerId is required");
+  },
+);
+
+Given(
+  "invalid headers without authentication and the content type is provided",
+  function () {
+    this.headers = createOrdersHeadersUnauthorized;
+  },
+);
+
+Then("the response should contain the unauthorized message", async function () {
+  body = await response.json();
+  console.log("response body:", body);
+
+  apiServices.validateResponseBody(body, "message");
+
+  expect(body.message).toBe("Missing token");
+});
+
+When("an invalid order Id is generated", function () {
+  orderId = "testing";
+});
+
+Then("the response should contain the not found message", async function () {
+  body = await response.json();
+  console.log("response body:", body);
+
+  apiServices.validateResponseBody(body, "message");
+
+  expect(body.message).toBe("Not found");
 });

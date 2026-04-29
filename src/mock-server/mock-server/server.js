@@ -1,13 +1,13 @@
-const express = require("express");
-const auth = require("./authMiddleware");
-const {
+import express from "express";
+import auth from "./authMiddleware.js";
+import {
   createOrder,
   getOrder,
   updateStatus,
   deleteOrder,
   resetOrders,
   listOrders,
-} = require("./orderStore");
+} from "./orderStore.js";
 
 const app = express();
 app.use(express.json());
