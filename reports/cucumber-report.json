@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 21594099
+              "duration": 16884600
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 334600
+              "duration": 760699
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 189300
+              "duration": 152199
             }
           },
           {
@@ -53,7 +53,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1056399
+              "duration": 879099
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 12,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 37919699
+              "duration": 41494500
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 13,
             "name": "the response status should be 201",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 318700
+              "duration": 346900
             }
           },
           {
@@ -88,11 +88,11 @@
             "line": 14,
             "name": "the response should contain the correct order information",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:72"
+              "location": "tests\\step-definations\\order-api.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 6185800
+              "duration": 5396899
             }
           },
           {
@@ -100,7 +100,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 5725199
+              "duration": 2669199
             }
           }
         ],
@@ -144,7 +144,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2916800
+              "duration": 1922100
             }
           },
           {
@@ -157,7 +157,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 240699
+              "duration": 336600
             }
           },
           {
@@ -170,7 +170,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 153299
+              "duration": 115199
             }
           },
           {
@@ -183,7 +183,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 753400
+              "duration": 256499
             }
           },
           {
@@ -192,11 +192,11 @@
             "line": 25,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 7360499
+              "duration": 7180100
             }
           },
           {
@@ -205,11 +205,11 @@
             "line": 26,
             "name": "the response status should be 400",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 162699
+              "duration": 126199
             }
           },
           {
@@ -218,11 +218,11 @@
             "line": 27,
             "name": "the response should contain the bad request-customerId is required message",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:131"
+              "location": "tests\\step-definations\\order-api.js:126"
             },
             "result": {
               "status": "passed",
-              "duration": 3290899
+              "duration": 632800
             }
           },
           {
@@ -230,7 +230,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1325199
+              "duration": 972700
             }
           }
         ],
@@ -270,7 +270,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1324800
+              "duration": 1449400
             }
           },
           {
@@ -283,7 +283,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 154199
+              "duration": 138500
             }
           },
           {
@@ -292,11 +292,11 @@
             "line": 36,
             "name": "invalid headers without authentication and the content type is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:155"
+              "location": "tests\\step-definations\\order-api.js:134"
             },
             "result": {
               "status": "passed",
-              "duration": 223199
+              "duration": 166199
             }
           },
           {
@@ -309,7 +309,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 777199
+              "duration": 163400
             }
           },
           {
@@ -318,11 +318,11 @@
             "line": 38,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 8568600
+              "duration": 6093699
             }
           },
           {
@@ -331,11 +331,11 @@
             "line": 39,
             "name": "the response status should be 401",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 128200
+              "duration": 70199
             }
           },
           {
@@ -344,11 +344,11 @@
             "line": 40,
             "name": "the response should contain the unauthorized message",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:162"
+              "location": "tests\\step-definations\\order-api.js:141"
             },
             "result": {
               "status": "passed",
-              "duration": 1952499
+              "duration": 735799
             }
           },
           {
@@ -356,7 +356,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 972999
+              "duration": 1690300
             }
           }
         ],
@@ -428,7 +428,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1195500
+              "duration": 1940000
             }
           },
           {
@@ -441,7 +441,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 141700
+              "duration": 149499
             }
           },
           {
@@ -454,7 +454,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 93600
+              "duration": 76800
             }
           },
           {
@@ -467,7 +467,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2486100
+              "duration": 196199
             }
           },
           {
@@ -476,11 +476,11 @@
             "line": 12,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 4702299
+              "duration": 4099499
             }
           },
           {
@@ -489,11 +489,11 @@
             "line": 13,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:98"
+              "location": "tests\\step-definations\\order-api.js:95"
             },
             "result": {
               "status": "passed",
-              "duration": 1388099
+              "duration": 211499
             }
           },
           {
@@ -502,11 +502,11 @@
             "line": 14,
             "name": "a valid retrieve order API endpoint is available",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:104"
+              "location": "tests\\step-definations\\order-api.js:100"
             },
             "result": {
               "status": "passed",
-              "duration": 178499
+              "duration": 173000
             }
           },
           {
@@ -519,7 +519,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 105199
+              "duration": 83200
             }
           },
           {
@@ -528,11 +528,11 @@
             "line": 16,
             "name": "I send a GET request",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:108"
+              "location": "tests\\step-definations\\order-api.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 4458000
+              "duration": 4729700
             }
           },
           {
@@ -541,11 +541,11 @@
             "line": 17,
             "name": "the response status should be 200",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 131600
+              "duration": 117600
             }
           },
           {
@@ -554,11 +554,11 @@
             "line": 18,
             "name": "the response should contain the correct order information",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:72"
+              "location": "tests\\step-definations\\order-api.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 9715200
+              "duration": 2217999
             }
           },
           {
@@ -566,7 +566,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4899799
+              "duration": 7388800
             }
           }
         ],
@@ -610,7 +610,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1193900
+              "duration": 1605599
             }
           },
           {
@@ -623,7 +623,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 205300
+              "duration": 262400
             }
           },
           {
@@ -636,7 +636,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 70200
+              "duration": 119700
             }
           },
           {
@@ -649,7 +649,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 857400
+              "duration": 223400
             }
           },
           {
@@ -658,11 +658,11 @@
             "line": 29,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 6645600
+              "duration": 7648800
             }
           },
           {
@@ -671,11 +671,11 @@
             "line": 30,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:98"
+              "location": "tests\\step-definations\\order-api.js:95"
             },
             "result": {
               "status": "passed",
-              "duration": 2456699
+              "duration": 147199
             }
           },
           {
@@ -684,11 +684,11 @@
             "line": 31,
             "name": "a valid retrieve order API endpoint is available",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:104"
+              "location": "tests\\step-definations\\order-api.js:100"
             },
             "result": {
               "status": "passed",
-              "duration": 106099
+              "duration": 104800
             }
           },
           {
@@ -697,11 +697,11 @@
             "line": 32,
             "name": "invalid headers without authentication and the content type is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:155"
+              "location": "tests\\step-definations\\order-api.js:134"
             },
             "result": {
               "status": "passed",
-              "duration": 121000
+              "duration": 91000
             }
           },
           {
@@ -710,11 +710,11 @@
             "line": 33,
             "name": "I send a GET request",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:108"
+              "location": "tests\\step-definations\\order-api.js:104"
             },
             "result": {
               "status": "passed",
-              "duration": 7228399
+              "duration": 5548299
             }
           },
           {
@@ -723,11 +723,11 @@
             "line": 34,
             "name": "the response status should be 401",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 115400
+              "duration": 173999
             }
           },
           {
@@ -736,11 +736,11 @@
             "line": 35,
             "name": "the response should contain the unauthorized message",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:162"
+              "location": "tests\\step-definations\\order-api.js:141"
             },
             "result": {
               "status": "passed",
-              "duration": 5770500
+              "duration": 490000
             }
           },
           {
@@ -748,7 +748,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1072500
+              "duration": 1238099
             }
           }
         ],
@@ -820,7 +820,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1076000
+              "duration": 1642299
             }
           },
           {
@@ -833,7 +833,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 131300
+              "duration": 197300
             }
           },
           {
@@ -846,7 +846,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 234600
+              "duration": 91900
             }
           },
           {
@@ -859,7 +859,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2416000
+              "duration": 152399
             }
           },
           {
@@ -868,11 +868,11 @@
             "line": 12,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 4802599
+              "duration": 5414899
             }
           },
           {
@@ -881,11 +881,11 @@
             "line": 13,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:98"
+              "location": "tests\\step-definations\\order-api.js:95"
             },
             "result": {
               "status": "passed",
-              "duration": 1281000
+              "duration": 164499
             }
           },
           {
@@ -894,11 +894,11 @@
             "line": 14,
             "name": "a valid update order API endpoint is available",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:127"
+              "location": "tests\\step-definations\\order-api.js:122"
             },
             "result": {
               "status": "passed",
-              "duration": 154299
+              "duration": 172599
             }
           },
           {
@@ -911,7 +911,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66800
+              "duration": 83800
             }
           },
           {
@@ -920,11 +920,11 @@
             "line": 16,
             "name": "order update payload is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:115"
+              "location": "tests\\step-definations\\order-api.js:109"
             },
             "result": {
               "status": "passed",
-              "duration": 123700
+              "duration": 177999
             }
           },
           {
@@ -933,11 +933,11 @@
             "line": 17,
             "name": "I send a Update request",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:119"
+              "location": "tests\\step-definations\\order-api.js:113"
             },
             "result": {
               "status": "passed",
-              "duration": 5772400
+              "duration": 5304799
             }
           },
           {
@@ -946,11 +946,11 @@
             "line": 18,
             "name": "the response status should be 200",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 101699
+              "duration": 85000
             }
           },
           {
@@ -959,11 +959,11 @@
             "line": 19,
             "name": "the response should contain the correct order information",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:72"
+              "location": "tests\\step-definations\\order-api.js:71"
             },
             "result": {
               "status": "passed",
-              "duration": 3175000
+              "duration": 1040799
             }
           },
           {
@@ -971,7 +971,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1027199
+              "duration": 1130699
             }
           }
         ],
@@ -1015,7 +1015,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1309100
+              "duration": 1977300
             }
           },
           {
@@ -1028,7 +1028,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 387099
+              "duration": 147000
             }
           },
           {
@@ -1041,7 +1041,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 66499
+              "duration": 82100
             }
           },
           {
@@ -1054,7 +1054,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 868500
+              "duration": 145800
             }
           },
           {
@@ -1063,11 +1063,11 @@
             "line": 30,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 8687099
+              "duration": 7291899
             }
           },
           {
@@ -1076,11 +1076,11 @@
             "line": 31,
             "name": "an order Id is generated",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:98"
+              "location": "tests\\step-definations\\order-api.js:95"
             },
             "result": {
               "status": "passed",
-              "duration": 1571700
+              "duration": 153999
             }
           },
           {
@@ -1089,11 +1089,11 @@
             "line": 32,
             "name": "a valid update order API endpoint is available",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:127"
+              "location": "tests\\step-definations\\order-api.js:122"
             },
             "result": {
               "status": "passed",
-              "duration": 102900
+              "duration": 88799
             }
           },
           {
@@ -1102,11 +1102,11 @@
             "line": 33,
             "name": "invalid headers without authentication and the content type is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:155"
+              "location": "tests\\step-definations\\order-api.js:134"
             },
             "result": {
               "status": "passed",
-              "duration": 92500
+              "duration": 67000
             }
           },
           {
@@ -1115,11 +1115,11 @@
             "line": 34,
             "name": "order update payload is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:115"
+              "location": "tests\\step-definations\\order-api.js:109"
             },
             "result": {
               "status": "passed",
-              "duration": 69399
+              "duration": 67099
             }
           },
           {
@@ -1128,11 +1128,11 @@
             "line": 35,
             "name": "I send a Update request",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:119"
+              "location": "tests\\step-definations\\order-api.js:113"
             },
             "result": {
               "status": "passed",
-              "duration": 3470899
+              "duration": 4649900
             }
           },
           {
@@ -1141,11 +1141,11 @@
             "line": 36,
             "name": "the response status should be 401",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 115399
+              "duration": 109300
             }
           },
           {
@@ -1154,11 +1154,11 @@
             "line": 37,
             "name": "the response should contain the unauthorized message",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:162"
+              "location": "tests\\step-definations\\order-api.js:141"
             },
             "result": {
               "status": "passed",
-              "duration": 5942700
+              "duration": 464099
             }
           },
           {
@@ -1166,7 +1166,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1362300
+              "duration": 923599
             }
           }
         ],
@@ -1210,7 +1210,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1760600
+              "duration": 3040999
             }
           },
           {
@@ -1223,7 +1223,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 142499
+              "duration": 248799
             }
           },
           {
@@ -1236,7 +1236,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 91100
+              "duration": 91799
             }
           },
           {
@@ -1249,7 +1249,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 762099
+              "duration": 147999
             }
           },
           {
@@ -1258,11 +1258,11 @@
             "line": 48,
             "name": "I send a POST request to \"/orders\" with the order data",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:57"
+              "location": "tests\\step-definations\\order-api.js:55"
             },
             "result": {
               "status": "passed",
-              "duration": 4156399
+              "duration": 3864800
             }
           },
           {
@@ -1271,11 +1271,11 @@
             "line": 49,
             "name": "an invalid order Id is generated",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:171"
+              "location": "tests\\step-definations\\order-api.js:147"
             },
             "result": {
               "status": "passed",
-              "duration": 167300
+              "duration": 423700
             }
           },
           {
@@ -1284,11 +1284,11 @@
             "line": 50,
             "name": "a valid update order API endpoint is available",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:127"
+              "location": "tests\\step-definations\\order-api.js:122"
             },
             "result": {
               "status": "passed",
-              "duration": 99200
+              "duration": 120099
             }
           },
           {
@@ -1301,7 +1301,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 85400
+              "duration": 91400
             }
           },
           {
@@ -1310,11 +1310,11 @@
             "line": 52,
             "name": "order update payload is provided",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:115"
+              "location": "tests\\step-definations\\order-api.js:109"
             },
             "result": {
               "status": "passed",
-              "duration": 79500
+              "duration": 77299
             }
           },
           {
@@ -1323,11 +1323,11 @@
             "line": 53,
             "name": "I send a Update request",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:119"
+              "location": "tests\\step-definations\\order-api.js:113"
             },
             "result": {
               "status": "passed",
-              "duration": 6145300
+              "duration": 3827399
             }
           },
           {
@@ -1336,11 +1336,11 @@
             "line": 54,
             "name": "the response status should be 404",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:68"
+              "location": "tests\\step-definations\\order-api.js:67"
             },
             "result": {
               "status": "passed",
-              "duration": 105800
+              "duration": 146899
             }
           },
           {
@@ -1349,11 +1349,11 @@
             "line": 55,
             "name": "the response should contain the not found message",
             "match": {
-              "location": "tests\\step-definations\\order-api.js:175"
+              "location": "tests\\step-definations\\order-api.js:151"
             },
             "result": {
               "status": "passed",
-              "duration": 1430100
+              "duration": 529899
             }
           },
           {
@@ -1361,7 +1361,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 981099
+              "duration": 986499
             }
           }
         ],

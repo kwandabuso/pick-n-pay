@@ -48,8 +48,6 @@ Given(
 Given(
   "order payload with customerId {string}, sku {string} and quantity {int} is provided",
   function (customerId, sku, quantity) {
-    console.log("Building order payload with:", { customerId, sku, quantity });
-
     orderData = buildCreateOrderPayloadSuccess(customerId, sku, quantity);
   },
 );
@@ -62,6 +60,7 @@ When(
       orderData,
       this.headers,
     );
+    body = await response.json();
   },
 );
 
@@ -72,8 +71,6 @@ Then("the response status should be {int}", function (expectedStatus) {
 Then(
   "the response should contain the correct order information",
   async function () {
-    body = await response.json();
-
     apiServices.validateResponseBody(
       body,
       "id",
@@ -96,7 +93,6 @@ Then(
 );
 
 When("an order Id is generated", async function () {
-  body = await response.json();
   orderId = body.id;
 });
 
@@ -106,10 +102,8 @@ Given("a valid retrieve order API endpoint is available", function () {
 });
 
 When("I send a GET request", async function () {
-  console.log("Sending GET request to:", this.url);
-  console.log("Sending GET request to:", this.headers);
-
   response = await apiServices.sendGetRequest(this.url, this.headers);
+  body = await response.json();
 });
 
 Given("order update payload is provided", function () {
@@ -122,6 +116,7 @@ When("I send a Update request", async function () {
     orderData,
     this.headers,
   );
+  body = await response.json();
 });
 
 Given("a valid update order API endpoint is available", function () {
@@ -131,23 +126,7 @@ Given("a valid update order API endpoint is available", function () {
 Then(
   "the response should contain the bad request-customerId is required message",
   async function () {
-    body = await response.json();
-    console.log("response body:", body);
-
     apiServices.validateResponseBody(body, "message");
-
-    expect(body.message).toBe("customerId is required");
-  },
-);
-
-Then(
-  "the response should contain the bad request-sku is required message",
-  async function () {
-    body = await response.json();
-    console.log("response body:", body);
-
-    apiServices.validateResponseBody(body, "message");
-
     expect(body.message).toBe("customerId is required");
   },
 );
@@ -160,9 +139,6 @@ Given(
 );
 
 Then("the response should contain the unauthorized message", async function () {
-  body = await response.json();
-  console.log("response body:", body);
-
   apiServices.validateResponseBody(body, "message");
 
   expect(body.message).toBe("Missing token");
@@ -173,10 +149,6 @@ When("an invalid order Id is generated", function () {
 });
 
 Then("the response should contain the not found message", async function () {
-  body = await response.json();
-  console.log("response body:", body);
-
   apiServices.validateResponseBody(body, "message");
-
   expect(body.message).toBe("Not found");
 });
